@@ -1,0 +1,13 @@
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastructures.tests.XML
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastructures.tests.dll
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastructures.tests.pdb
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\nunit.framework.dll
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\obj\Debug\ResolveAssemblyReference.cache
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\obj\Debug\functional_datastructures.tests.dll
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\obj\Debug\functional_datastructures.tests.pdb
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\FSharp.PowerPack.dll
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\FSharp.PowerPack.pdb
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\FSharp.PowerPack.xml
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastrutures.dll
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastrutures.pdb
+c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastrutures.xml

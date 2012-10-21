@@ -1,0 +1,6 @@
+c:\dev\algo\functional_datastrutures\functional_datastrutures\bin\Debug\functional_datastrutures.XML
+c:\dev\algo\functional_datastrutures\functional_datastrutures\bin\Debug\functional_datastrutures.dll
+c:\dev\algo\functional_datastrutures\functional_datastrutures\bin\Debug\functional_datastrutures.pdb
+c:\dev\algo\functional_datastrutures\functional_datastrutures\obj\Debug\ResolveAssemblyReference.cache
+c:\dev\algo\functional_datastrutures\functional_datastrutures\obj\Debug\functional_datastrutures.dll
+c:\dev\algo\functional_datastrutures\functional_datastrutures\obj\Debug\functional_datastrutures.pdb
