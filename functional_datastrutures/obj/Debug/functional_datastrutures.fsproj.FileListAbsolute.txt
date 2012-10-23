@@ -4,3 +4,9 @@ c:\dev\algo\functional_datastrutures\functional_datastrutures\bin\Debug\function
 c:\dev\algo\functional_datastrutures\functional_datastrutures\obj\Debug\ResolveAssemblyReference.cache
 c:\dev\algo\functional_datastrutures\functional_datastrutures\obj\Debug\functional_datastrutures.dll
 c:\dev\algo\functional_datastrutures\functional_datastrutures\obj\Debug\functional_datastrutures.pdb
+C:\dev\functional-datastructures\functional_datastrutures\bin\Debug\functional_datastrutures.XML
+C:\dev\functional-datastructures\functional_datastrutures\bin\Debug\functional_datastrutures.dll
+C:\dev\functional-datastructures\functional_datastrutures\bin\Debug\functional_datastrutures.pdb
+C:\dev\functional-datastructures\functional_datastrutures\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\functional-datastructures\functional_datastrutures\obj\Debug\functional_datastrutures.dll
+C:\dev\functional-datastructures\functional_datastrutures\obj\Debug\functional_datastrutures.pdb

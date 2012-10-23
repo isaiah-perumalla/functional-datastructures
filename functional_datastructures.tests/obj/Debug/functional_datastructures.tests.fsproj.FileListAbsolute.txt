@@ -11,3 +11,15 @@ c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\F
 c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastrutures.dll
 c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastrutures.pdb
 c:\dev\algo\functional_datastrutures\functional_datastructures.tests\bin\Debug\functional_datastrutures.xml
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\functional_datastructures.tests.XML
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\functional_datastructures.tests.dll
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\functional_datastructures.tests.pdb
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\FSharp.PowerPack.Compatibility.dll
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\functional_datastrutures.dll
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\functional_datastrutures.pdb
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\functional_datastrutures.xml
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\FSharp.PowerPack.Compatibility.pdb
+C:\dev\functional-datastructures\functional_datastructures.tests\bin\Debug\FSharp.PowerPack.Compatibility.xml
+C:\dev\functional-datastructures\functional_datastructures.tests\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\functional-datastructures\functional_datastructures.tests\obj\Debug\functional_datastructures.tests.dll
+C:\dev\functional-datastructures\functional_datastructures.tests\obj\Debug\functional_datastructures.tests.pdb

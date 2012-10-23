@@ -11,6 +11,9 @@ type ``Given a set should test for member ship`` ()=
        let randomSeq n = 
             let r = new Random()
             in seq{for i in 1 .. n -> r.Next(5000)} 
+
+       let assert_invariants t = (TreeSet.assert_balanced t && TreeSet.assert_left_leaning_invariants t) 
+                                    |> should be True
       
        [<Test>] member test.
          ``simple test for equality.`` ()=
@@ -26,24 +29,20 @@ type ``Given a set should test for member ship`` ()=
         ``test balance on increasing seq insertion `` ()= 
             let set_with_1000 = Seq.fold TreeSet.insert TreeSet.empty {1 .. 1000}
             TreeSet.mem 100 set_with_1000 |> should be True
-            TreeSet.assert_balanced set_with_1000 |> should be True
-            TreeSet.assert_left_leaning_invariants set_with_1000 |> should be True
+            assert_invariants set_with_1000
             
        [<Test>] 
        member test.
         ``test balance on decreasing seq insertion `` ()= 
-            let set_with_random = Seq.fold TreeSet.insert TreeSet.empty (seq{1000 .. -1 ..1})
-            TreeSet.mem 100 set_with_random |> should be True
-            TreeSet.assert_balanced set_with_random |> should be True
-            TreeSet.assert_left_leaning_invariants set_with_random |> should be True
+            let set = Seq.fold TreeSet.insert TreeSet.empty (seq{1000 .. -1 ..1})
+            TreeSet.mem 100 set |> should be True
+            assert_invariants set
                     
        [<Test>] 
        member test.
         ``test balance on random seq insertion `` ()= 
             let set_with_random = Seq.fold TreeSet.insert TreeSet.empty (randomSeq 1000)
-           
-            TreeSet.assert_balanced set_with_random |> should be True
-            TreeSet.assert_left_leaning_invariants set_with_random |> should be True
+            assert_invariants set_with_random
 
 
             

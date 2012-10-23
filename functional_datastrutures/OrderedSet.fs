@@ -42,15 +42,14 @@ namespace OrderedSet
 
         
         let insert set x = 
-            let s = add x set
-            in match s with 
+            let root = add x set
+            in match root with 
                 |R(l, v, r) -> B(l, v, r)
-                |_ -> s
+                |_ -> root
         
         let rec assert_left_leaning_invariants  = function
-                    |R(_,_,R(_,_,_)) -> false
-                    |B(_,_,R(_,_,_)) -> false
-                    |R(R(_,_,_), _, _) -> false
+                    |R(_,_,R(_,_,_)) | R(R(_,_,_), _, _)-> false (*red nodes cannot have red children*)
+                    |B(_,_,R(_,_,_)) -> false (*red nodes can only lean right *)
                     |R(l,v,r) | B(l,v,r) -> assert_left_leaning_invariants l && assert_left_leaning_invariants r
                     |_ -> true
             
