@@ -2,7 +2,7 @@
 open NUnit.Framework
 open NUnit.Framework.Constraints
 open System.Diagnostics;
-open Microsoft.FSharp
+open Microsoft.FSharp.Compatibility
 
 let should (f : 'a -> #Constraint) x (y : obj) =
     let c = f x
@@ -71,10 +71,12 @@ let time f x =
     try f x finally
     printf "time taken %dms" timer.ElapsedMilliseconds
 
-(*let cpu_time f x = 
-    let t = Sys.time()
+let cpu_time f x = 
+    let sysTime = fun () -> Process.GetCurrentProcess().UserProcessorTime.Milliseconds
+    in
+    let t = sysTime()
     try f x finally
-    printf "time taken %dms" (Sys.time() - t)
-*)    
+    printf "time taken %dms" (sysTime() - t)
+    
 module FsUnitDepricated = 
     let not x = not' x
