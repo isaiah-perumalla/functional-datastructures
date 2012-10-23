@@ -10,7 +10,7 @@ type ``Given a set should test for member ship`` ()=
        
        let randomSeq n = 
             let r = new Random()
-            in seq{for i in 1 .. n -> r.Next(5000)} 
+            in seq{for i in 1 .. n -> r.Next()} 
 
        let assert_invariants t = (TreeSet.assert_balanced t && TreeSet.assert_left_leaning_invariants t) 
                                     |> should be True
@@ -41,9 +41,23 @@ type ``Given a set should test for member ship`` ()=
        [<Test>] 
        member test.
         ``test balance on random seq insertion `` ()= 
-            let set_with_random = Seq.fold TreeSet.insert TreeSet.empty (randomSeq 1000)
+            let set_with_random = Seq.fold TreeSet.insert TreeSet.empty (randomSeq 10000)    
             assert_invariants set_with_random
 
+
+       [<Test>] 
+       member test.
+        ``test performanance of inserts `` ()=
+          // time (Seq.fold TreeSet.insert TreeSet.empty) (randomSeq 1000000) |> ignore
+           let ins set y=  Set.add y set
+           time (Seq.fold ins Set.empty) (randomSeq 10000000) |> ignore
+      
+       [<Test>] 
+       member test.
+        ``test performanance of lookups `` ()=
+           let set = (Seq.fold TreeSet.insert TreeSet.empty) (randomSeq 1000000) 
+           let ins set y=  Set.add y set
+           time (Seq.fold ins Set.empty) (randomSeq 10000000) |> ignore
 
             
 

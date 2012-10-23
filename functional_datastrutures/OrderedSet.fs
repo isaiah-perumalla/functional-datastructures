@@ -3,11 +3,14 @@
 namespace OrderedSet
     module TreeSet=
 
+        
         type 'a rbTree = |E  
                          | R of 'a rbTree * 'a * 'a rbTree 
                          | B of 'a rbTree * 'a * 'a rbTree
 
         let empty = E
+
+        
 
         let rec mem x = function
                 | E -> false
