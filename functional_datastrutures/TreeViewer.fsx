@@ -3,11 +3,11 @@
 #r "System.Xaml.dll";;
 #r "WindowsBase.dll";;
 
+open System
 open System.Windows
+
 type Tree<'a> = Node of 'a * (Tree<'a> list)
-type 'a rbTree = |E  
-                 | R of 'a rbTree * 'a * 'a rbTree 
-                 | B of 'a rbTree * 'a * 'a rbTree
+
 
 type color = Red | Black
 
@@ -24,6 +24,7 @@ and mknode clr l v r =
         |E,a |a,E -> Node(value,[toTree a;])
         |a,b -> Node(value, [toTree a; toTree b;]  )
    
+
 let moveExtent e (dx: float) =
         [ for p, q in e -> p + dx, q + dx ]
 
@@ -157,14 +158,22 @@ let renderOnCanvas renderer t =
           canvas.Children.Add label |> ignore
     canvas
 
+let treeToCanvas t = renderOnCanvas labelAt  t
+
+let rbTreeToCanvas t = toTree t |> (renderOnCanvas rbLabel) 
+
 [<System.STAThread>]
-let displayTree renderer t =
+let display control  =
       do
-        let canvas = renderOnCanvas renderer t
-        let scroll = Controls.ScrollViewer(Content=canvas)
+        let scroll = Controls.ScrollViewer(Content=control)
         scroll.HorizontalScrollBarVisibility <- Controls.ScrollBarVisibility.Visible
         Application().Run(Window(Content=scroll)) |> ignore
+        
 
 
-let (Tree(t, cs)) = List.ofSeq tree
-displayTree labelAt t
+let randomInts n = let r = new Random()
+                   in [for i in 1 .. n -> r.Next(n*3)]
+
+(*t (Tree(t, cs)) = List.ofSeq tree
+display (treeToCanvas t)
+*)
